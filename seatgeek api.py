@@ -51,7 +51,7 @@ for row in rows:
 
 
 
-r = requests.get("http://api.seatgeek.com/2/events?client_id=xxxxxx'" , verify=False) # put in your seatgeek clinet_id here
+r = requests.get("http://api.seatgeek.com/2/events?client_id=xxxxxx'" , verify=False) # put in your seatgeek client_id here
 
 
 
@@ -59,8 +59,8 @@ count = 0
 for team in teams:
     team_lower = team.lower()
     team_final = team_lower.replace(" ", "+")
-    r = requests.get('https://api.seatgeek.com/2/events?q='+team_final+'&per_page=1000&client_id=MTQzMjkwMTJ8MTU0NDQ2MTk0NS40Nw', verify=False)
-    #r = requests.get('https://api.seatgeek.com/2/events?q=boston+celtics&per_page=1000&client_id=MTQzMjkwMTJ8MTU0NDQ2MTk0NS40Nw', verify=False)
+    r = requests.get('https://api.seatgeek.com/2/events?q='+team_final+'&per_page=1000&client_id=xxxxxx', verify=False) # put in your seatgeek client_id here
+
     js = r.json()
     events = js["events"]
 
